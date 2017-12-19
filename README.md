@@ -21,9 +21,16 @@ most people do, you'll need to follow the
 
 1. Clone this repository.
 2. Download and unzip the [Neighborhood](https://github.com/Microsoft/AirSim/releases/download/v1.1.7/Neighbourhood.zip)
-example, open it, and click <b>run.bat</b> to launch AirSim.
+example, open it, and click <b>run.bat</b> to launch AirSim.  If you click the <b>3</b> key on your keyboard,
+you will see the little image on which the neural net will be trained.
 3. When prompted, go with the default car simulation.
-4. From the repository, run the <b>image_collection.py</b> script.  It will start the car moving and stop 
+4. From the repository, run the <b>image_collection.py</b> script.  It will start the car moving and stop when the
+car collides with the fence, creating a <b>carpix</b> folder containing the images on which you will train 
+the network in the next step.
+5. From the repository, run the <b>collision_training.py</b> script.  Running on an HP Z440 workstation with 
+NVIDIA GeForce GTX 1080 Ti GPU, we were able to complete the 500 training iterations in a few seconds.
+6. From the repository, run the <b>collision_testing.py</b> script.  This should drive the car forward as before, but 
+but the car should stop right before it hits the fence, based on the collision predicted by the neural net.
 
 # Future work
 
