@@ -15,6 +15,10 @@ import matplotlib.pyplot as plt
 # Images are too big to train quickly, so we scale 'em down
 SCALEDOWN = 6
 
+# Where we'll store images
+IMAGEDIR = './carpix'
+
+# Create images directory if it doesn't exist
 def loadgray(filename):
     '''
     Loads an RGBA image from FILENAME, converts it to grayscale, and returns a flattened copy

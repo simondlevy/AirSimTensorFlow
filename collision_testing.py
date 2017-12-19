@@ -17,10 +17,10 @@ import tensorflow as tf
 import pickle
 import sys
 
-from image_helper import loadgray
+from image_helper import loadgray, IMAGEDIR
 from tf_softmax_layer import inference
 
-TMPFILE = 'active.png'
+TMPFILE = IMAGEDIR + '/active.png'
 PARAMFILE = 'params.pkl'
 IMGSIZE = 1032
 INITIAL_THROTTLE= 0.65

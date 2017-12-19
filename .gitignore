@@ -3,4 +3,3 @@ carpix/
 logistic_logs/
 data/
 *.pkl
-*.png

@@ -11,6 +11,7 @@ MIT License
 '''
 
 from AirSimClient import CarClient, CarControls, ImageRequest, AirSimImageType, AirSimClientBase
+from image_helper import IMAGEDIR
 import pprint
 import os
 import time
@@ -18,10 +19,7 @@ import time
 # We maintain a queue of images of this size
 QUEUESIZE = 10
 
-# Where we'll store images
-IMAGEDIR = './carpix'
-
-# Create images directory if it doesn't exist
+# Create image directory if it doesn't already exist
 try:
     os.stat(IMAGEDIR)
 except:
