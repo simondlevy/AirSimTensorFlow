@@ -15,7 +15,7 @@ example.
 
 * [TensorFlow](https://www.tensorflow.org/install/install_windows). To run TensorFlow on your GPU as we and
 most people do, you'll need to follow the 
-[directions](https://www.tensorflow.org/install/install_windows#[TensorFlow](https://www.tensorflow.org/install/install_windows) for installing CUDA and CuDNN.  We recommend setting aside at least an hour to make sure you do this right.
+[directions](https://www.tensorflow.org/install/install_windows) for installing CUDA and CuDNN.  We recommend setting aside at least an hour to make sure you do this right.
 
 # Instructions
 
