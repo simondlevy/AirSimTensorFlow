@@ -1,6 +1,19 @@
-from AirSimClient import *
+#!/usr/bin/env python3
+'''
+image_collection.py : uses AirSim to collect vehicle first-person-view images
+
+Copyright (C) 2017 Jack Baird, Alex Cantrell, Keith Denning, Rajwol Joshi, 
+Simon D. Levy, Will McMurtry, Jacob Rosen
+
+This file is part of AirSimTensorFlow
+
+MIT License
+'''
+
+from AirSimClient import CarClient, CarControls, ImageRequest, AirSimImageType, AirSimClientBase
 import pprint
 import os
+import time
 
 # We maintain a queue of images of this size
 QUEUESIZE = 10

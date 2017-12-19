@@ -1,3 +1,18 @@
+'''
+softmax_layer.py : generic SoftMax inference() method for TensorFlow
+
+Adapted from:
+
+    https://github.com/darksigma/Fundamentals-of-Deep-Learning-Book/blob/master/fdl_examples/chapter3/logistic_regression_updated.py
+
+Copyright (C) 2017 Jack Baird, Alex Cantrell, Keith Denning, Rajwol Joshi, 
+Simon D. Levy, Will McMurtry, Jacob Rosen
+
+This file is part of AirSimTensorFlow
+
+MIT License
+'''
+
 import tensorflow as tf
 
 def inference(x, xsize, ysize, W_vals=0, b_vals=0):

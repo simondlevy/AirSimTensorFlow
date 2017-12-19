@@ -1,3 +1,15 @@
+'''
+image_helper.py : contains loadgray() method to load an RGBA image in PNG format 
+and return a grayscale image
+
+Copyright (C) 2017 Jack Baird, Alex Cantrell, Keith Denning, Rajwol Joshi, 
+Simon D. Levy, Will McMurtry, Jacob Rosen
+
+This file is part of AirSimTensorFlow
+
+MIT License
+'''
+
 import matplotlib.pyplot as plt
 
 # Images are too big to train quickly, so we scale 'em down

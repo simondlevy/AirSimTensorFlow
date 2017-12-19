@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
+'''
+collision_training.py : uses stored images to training a neural net to detect collisions
+
+Copyright (C) 2017 Jack Baird, Alex Cantrell, Keith Denning, Rajwol Joshi, 
+Simon D. Levy, Will McMurtry, Jacob Rosen
+
+This file is part of AirSimTensorFlow
+
+MIT License
+'''
 
 # Built-in modules
 import tensorflow as tf
-import time, shutil, os
 import numpy as np
 import pickle
 
@@ -78,10 +87,6 @@ def main():
         global_step = tf.Variable(0, name='global_step', trainable=False)
 
         train_op = training(cost, global_step)
-
-        summary_op = tf.summary.merge_all()
-
-        saver = tf.train.Saver()
 
         sess = tf.Session()
 

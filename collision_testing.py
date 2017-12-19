@@ -1,8 +1,21 @@
-from airsim_client import *
-import pprint
+#!/usr/bin/env python3
+'''
+collision_testing.py : tests pickled network on ability to predict a collision
+
+Copyright (C) 2017 Jack Baird, Alex Cantrell, Keith Denning, Rajwol Joshi, 
+Simon D. Levy, Will McMurtry, Jacob Rosen
+
+This file is part of AirSimTensorFlow
+
+MIT License
+'''
+
+from AirSimClient import CarClient, CarControls, ImageRequest, AirSimImageType, AirSimClientBase
 import os
+import time
 import tensorflow as tf
 import pickle
+import sys
 
 from image_helper import loadgray
 from tf_softmax_layer import inference
@@ -71,6 +84,7 @@ with tf.Graph().as_default():
 
             if brakingCount > BRAKING_DURATION:
                 print('BRAKING TO AVOID COLLISSION')
+                sys.stdout.flush()
                 break
             
             car_controls.brake = 1.0
