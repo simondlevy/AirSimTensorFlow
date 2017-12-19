@@ -40,7 +40,7 @@ convolutional network would be more realistic.  Note that we found it easier to 
 built-in <tt>pickle</tt> library to 
 [save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
 and 
-[re-load](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L5)
+[re-load](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L45)
 the trained network weights, rather than the more common practice of using TensorFlow's 
 [save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.
 
