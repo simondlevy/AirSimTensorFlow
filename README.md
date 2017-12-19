@@ -43,8 +43,8 @@ biases) using Python's built-in <tt>pickle</tt> library to
 [save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
 the trained network parameters (weights and biases).  The <b>collision_testing</b> script
 [restores](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L45)
-these parameters, then reconstructs the TensorFlow neural net from them.  We found this approach easier than
-using TensorFlow's [save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.
+these parameters, then reconstructs the TensorFlow neural net from them.  (We found this approach easier than
+using TensorFlow's [save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.)
 Finally, the <b>collision_testing</b> script moves the vehicle forwarded, converting the live 
 image into grayscale and running it through the network to make a collision/no-collision prediction.
 When the value of the &ldquo;collision bit&rdquo; exceeds 0.5, the script stops the vehicle.
