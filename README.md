@@ -38,8 +38,7 @@ The <b>image_collection</b> script maintains a queue of the ten most recent imag
 files in the <b>carpix</b> folder.  The <b>collision_training</b> script converts these color images to
 grayscale, then builds a training set in which all images but the final one are labeled as safe (no
 collision; code <tt>[1 0]</tt>), and the final one is labeled as a collision (code <tt>[0 1]</tt>).  
-Finally, this training script saves the trained network parameters (weights and
-biases) using Python's built-in <tt>pickle</tt> library to 
+Finally, this training script uses Python's built-in <tt>pickle</tt> library to 
 [save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
 the trained network parameters (weights and biases).  The <b>collision_testing</b> script uses <tt>pickle</tt> to
 [restore](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L45)
