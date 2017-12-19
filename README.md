@@ -11,7 +11,7 @@ it easiest to use the pre-compiled binaries in the
 [Neighborhood](https://github.com/Microsoft/AirSim/releases/download/v1.1.7/Neighbourhood.zip)
 example.
 
-* Python3
+* [Python3](https://www.python.org/ftp/python/3.6.3/python-3.6.3-amd64.exe) for 64-bit Windows
 
 * [TensorFlow](https://www.tensorflow.org/install/install_windows). To run TensorFlow on your GPU as we and
 most people do, you'll need to follow the 
