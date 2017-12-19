@@ -32,17 +32,31 @@ NVIDIA GeForce GTX 1080 Ti GPU, we were able to complete the 500 training iterat
 6. From the repository, run the <b>collision_testing.py</b> script.  This should drive the car forward as before, but 
 but the car should stop right before it hits the fence, based on the collision predicted by the neural net.
 
+# How it works
+
+The <b>image_collection</b> script maintains a queue of the ten most recent images and saves them to numbered
+files in the <b>carpix</b> folder.  The <b>collision_training</b> script converts these color images to
+grayscale, then builds a training set in which all images but the final one are labeled as safe (no
+collision; code <tt>[1 0]</tt>), and the final one is labeled as a collision (code <tt>[0 1]</tt>).  
+Finally, this training script saves the trained network parameters (weights and
+biases) using Python's built-in <tt>pickle</tt> library to 
+[save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
+the trained network parameters (weights and biases).  The <b>collision_testing</b> script
+[restores](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L45)
+these parameters, then reconstructs the TensorFlow neural net from them.  We found this approach easier than
+using TensorFlow's [save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.
+Finally, the <b>collision_testing</b> script moves the vehicle forwarded, converting the live 
+image into grayscale and running it through the network to make a collision/no-collision prediction.
+When the value of the &ldquo;collision bit&rdquo; exceeds 0.5, the script stops the vehicle.
+
 # Future work
 
-Our single-layer logistic regression network provides a simple proof-of-concept example; however,
-for a more realistic data set involving collisions with different types of objects, a 
-convolutional network would be more realistic.  Note that we found it easier to use Python's
-built-in <tt>pickle</tt> library to 
-[save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
-and 
-[restore](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L45)
-the trained network weights, rather than the more common practice of using TensorFlow's 
-[save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.
+Our single-layer logistic regression network provides a simple proof-of-concept
+example; however, for a more realistic data set involving collisions with
+different types of objects, a convolutional network would be more realistic.
+AirSim also provides access to depth images (just press the <b>1</b> key during
+the simulation) which, like the Lidar on today's self-driving cars, would
+provide a valuable additional source of information for avoiding collisions.
 
 # Credits
 
