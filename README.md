@@ -46,7 +46,7 @@ these parameters, then reconstructs the TensorFlow [neural net](https://github.c
 using TensorFlow's [save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.)
 Finally, the <b>collision_testing</b> script moves the vehicle forward, converting the live 
 image into grayscale and running it through the network to make a collision/no-collision prediction.
-When the value of the &ldquo;collision bit&rdquo; exceeds 0.5, the script stops the vehicle.
+When the value of the &ldquo;collision bit&rdquo; exceeds 0.5, the script stops the vehicle by applying the brakes.
 
 # Future work
 
