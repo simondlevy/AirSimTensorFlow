@@ -44,4 +44,7 @@ Washington and Lee University (listed alphabetically):
 * Will McMurtry 
 * Jacob Rosen
 
+# Acknowledgement
 
+We thank David Pfaff of the [W&L IQ Center](https://www.wlu.edu/iq-center) for
+providing the hardware on which we ran this project.
