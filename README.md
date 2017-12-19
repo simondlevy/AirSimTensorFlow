@@ -21,9 +21,9 @@ most people do, you'll need to follow the
 
 1. Clone this repository.
 2. Download and unzip the [Neighborhood](https://github.com/Microsoft/AirSim/releases/download/v1.1.7/Neighbourhood.zip)
-example, open it, and click <b>run.bat</b> to launch AirSim.  If you click the <b>3</b> key on your keyboard,
+example, open it, and click <b>run.bat</b> to launch AirSim.  
+3. When prompted, go with the default car simulation. If you press the <b>3</b> key on your keyboard,
 you will see the little image on which the neural net will be trained.
-3. When prompted, go with the default car simulation.
 4. From the repository, run the <b>image_collection.py</b> script.  It will start the car moving and stop when the
 car collides with the fence, creating a <b>carpix</b> folder containing the images on which you will train 
 the network in the next step.
@@ -36,7 +36,13 @@ but the car should stop right before it hits the fence, based on the collision p
 
 Our single-layer logistic regression network provides a simple proof-of-concept example; however,
 for a more realistic data set involving collisions with different types of objects, a 
-convolutional network would be more realistic.
+convolutional network would be more realistic.  Note that we found it easier to use Python's
+built-in <tt>pickle</tt> library to 
+[save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L113)
+and 
+[re-load](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L5)
+the trained network weights, rather than the more common practice of using TensorFlow's 
+[save-and-restore](https://www.tensorflow.org/programmers_guide/saved_model) API.
 
 # Credits
 
