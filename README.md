@@ -7,7 +7,7 @@ from a moving vehicle, then use that data to train and test a deep-learning neur
 
 * [Recommended hardware](https://wiki.unrealengine.com/Recommended_Hardware) for running UnrealEngine4, required
 for AirSim.  Although it is possible build AirSim on OS X and Linux, we found
-it easiest to use the pre-compiled binaries in the
+it easiest to use the pre-compiled Windows binaries in the
 [Neighborhood](https://github.com/Microsoft/AirSim/releases/download/v1.1.7/Neighbourhood.zip)
 example.
 
