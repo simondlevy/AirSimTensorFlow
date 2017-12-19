@@ -38,7 +38,7 @@ Our single-layer logistic regression network provides a simple proof-of-concept 
 for a more realistic data set involving collisions with different types of objects, a 
 convolutional network would be more realistic.  Note that we found it easier to use Python's
 built-in <tt>pickle</tt> library to 
-[save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L113)
+[save](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_training.py#L111-L113)
 and 
 [re-load](https://github.com/simondlevy/AirSimTensorFlow/blob/master/collision_testing.py#L42-L5)
 the trained network weights, rather than the more common practice of using TensorFlow's 
