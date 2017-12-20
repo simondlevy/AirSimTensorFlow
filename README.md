@@ -73,4 +73,4 @@ Washington and Lee University (listed alphabetically):
 # Acknowledgement
 
 We thank David Pfaff of the [W&L IQ Center](https://www.wlu.edu/iq-center) for
-providing the hardware on which we ran this project.
+providing the hardware on which we developed this project.
