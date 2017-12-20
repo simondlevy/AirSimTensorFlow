@@ -52,7 +52,7 @@ When the value of the &ldquo;collision bit&rdquo; exceeds 0.5, the script stops 
 
 Our single-layer logistic regression network provides a simple proof-of-concept
 example; however, for a more realistic data set involving collisions with
-different types of objects, a convolutional network would be more realistic.
+different types of objects, a convolutional network would make more sense.
 AirSim also provides access to depth images (just press the <b>1</b> key during
 the simulation) which, like the Lidar on today's self-driving cars, would
 provide a valuable additional source of information for avoiding collisions.
