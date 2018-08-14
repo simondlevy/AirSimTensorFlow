@@ -1,4 +1,4 @@
-<img src="airsim.png">
+<a href="https://www.youtube.com/watch?v=9bEPKMctNpI"><img src="airsim.png"></a>
 
 This repository contains Python scripts showing how you can use [Microsoft AirSim](https://github.com/Microsoft/AirSim) to collect image data
 from a moving vehicle, then use that data to train and test a deep-learning neural net in TensorFlow.  
